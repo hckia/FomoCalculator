@@ -4,14 +4,15 @@ The FOMO (Fear Of Missing Out) Calculator tells you what your return on investme
 The FOMO Calculator calculates what gains would achieved by investing in Bitcoin within a certain date. It utilizes the coindesk api, which holds the historical value of bitcoin all the way from July 17th, 2010 to the "yesterday" (present day minus one day).
 
 ## Global Variables
-BTC_DATA_URL 
+### BTC_DATA_URL 
 - url API endpoints
-max_val 
+### max_val 
 - max value
-max_val_date 
+### max_val_date 
 - max value and date
-min_val -min value
-min_val_date 
+### min_val 
+- min value
+### min_val_date 
 - min value and date
 
 submissionClicked - boolean for the state of the calculator.
