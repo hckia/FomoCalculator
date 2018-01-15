@@ -236,7 +236,7 @@ function getData(investmentData, investmentStart, investmentEnd) {
 }
 
 //get values from Form
-function getFormValues() {
+function getFormValues(event) {
   console.log('getFormValues fired');
   //make amountInvested an Float
   const amountInvested = parseFloat($(event.currentTarget).find('.js-amount').val(), 10);
@@ -409,7 +409,7 @@ function fomoSubmitClicked() {
 //put control statement here.
   if (submissionClicked === 0) {
     console.log("Submission Clicked");
-    getFormValues();
+    getFormValues(event);
   }
   else {
     console.log("Submission Reset");
