@@ -187,7 +187,7 @@ h2 {
   background-color: #800000;
 }
 
-p ul {
+p, ul {
   font-weight: bold;
   color: black;
   padding: 10px;
