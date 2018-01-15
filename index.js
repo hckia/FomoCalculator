@@ -139,7 +139,7 @@ function hideResults() {
   $('.investmentDisplay').slideUp("slow");
   $(".js-calculator").slideUp("slow");
   $(".js-submit-button").val("Calculate Investment");
-  $(".js-start-button").replaceWith("<button role=\"button\" class=\"calc-button js-start-button\" id=\"start-button\">Let's find out...</button>");
+  $(".js-start-button").replaceWith("<button aria-label=\"start button\" role=\"button\" class=\"calc-button js-start-button\" id=\"start-button\">Let's find out...</button>");
   resetForm();
   $("#amount-input").focus();
   displayCalculator();
