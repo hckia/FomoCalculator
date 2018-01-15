@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -13,7 +13,7 @@
           <h1>The FOMO<span id="top-header">Bitcoin Calculator</span></h1>
           <form class="js-invest-form">
               <fieldset>
-                 <span id="label-amount"><label>(Amount represented in dollars)</label></span>
+                 <span id="label-amount"><label for="amount-input">(Amount represented in dollars)</label></span>
                 <input role="spinbutton" class="js-amount" type="number" id="amount-input" dir="rtl"  autofocus> <!-- dir attribute!!! woo -->
                 <button role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-one" aria-hidden="true">1</button>
                 <button role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-two" aria-hidden="true">2</button>
@@ -27,9 +27,9 @@
                 <button role="button" class="calc-button js-calc-button" type="button" id="C" aria-hidden="true">C</button>
                 <button role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-zero" aria-hidden="true">0</button>
                 <button role="button" class="calc-button js-calc-button" type="button" id="DEL" aria-hidden="true">DEL</button>
-                <span class="dates"><label>Start Investment</label>
+                <span class="dates"><label for="start-date">Start Investment</label>
                 <input class="js-date-type js-date" type="date" id="start-date" min="2010-07-17" required ></span>
-                <span class="dates"><label>End Investment</label>
+                <span class="dates"><label for="end-date">End Investment</label>
                 <input class="js-date-type js-date-end" type="date" id="end-date" min="2010-07-17" required></span>
               </fieldset>
               <input role="button" class="js-submit-button" type="submit" value="Calculate Investment" id="submit-button">
