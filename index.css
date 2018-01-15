@@ -187,7 +187,13 @@ h2 {
   background-color: #800000;
 }
 
-p, ul {
+p {
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+}
+
+ul {
   font-weight: bold;
   color: black;
   padding: 10px;
