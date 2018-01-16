@@ -75,7 +75,7 @@ function BrowserDetection() {
     //Check if browser is Safari
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         // insert conditional Safari code here https://www.learningjquery.com/2017/05/how-to-use-javascript-to-detect-browser
-        alert("This application has detected you are using a Safari Browser Application. On Mobile Safari this should be fine, but on your desktop Safari browser you will have to type the start and end dates in the following format - YYYY-MM-DD");
+        alert("This application has detected you are using Safari Browser. On Mobile Safari this should be fine, but on your desktop we suggest using another browser. In Safari, the date input elements are not supported. You will have to type the start and end dates in the following format - YYYY-MM-DD - for the application to function");
     }
 }
 
