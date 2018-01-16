@@ -448,31 +448,31 @@ function fomoSubmitClicked() {
 //Calculator function allows buttons to be clicked, and determines their function
 function calculator() {
   $(".js-calc-num").on("mousedown",(function(e){ console.log("mousedown on calc button");
-    $(this).css({transform: "translateY(2px)"});//.focus();
+    $(this).css({transform: "translateY(2px)"}).focus();
     $("#amount-input").val($("#amount-input").val() + $(this).text() 
   )}));
   
   $(".js-calc-num").on("mouseup",(function(e){ console.log("mouseup on calc button");
-    $(this).css({transform: "translateY(-2px)"});//.focus();
+    $(this).css({transform: "translateY(-2px)"}).focus();
   }))
   
   $("#DEL").on("mousedown",(function(e){ console.log("mousedown on DEL");
-    $(this).css({transform: "translateY(2px)"});//.focus();
+    $(this).css({transform: "translateY(2px)"}).focus();
     $("#amount-input").val($("#amount-input").val().slice(0, $("#amount-input").val().length-1));
   }));
 
   $("#DEL").on("mouseup",(function(e){ console.log("mouseup on DEL");
-    $(this).css({transform: "translateY(-2px)"});//.focus();
+    $(this).css({transform: "translateY(-2px)"}).focus();
   }))
 
   $("#C").on("mousedown",(function(e){ console.log("mousedown on C");
-    $(this).css({transform: "translateY(2px)"});//.focus();
+    $(this).css({transform: "translateY(2px)"});.focus();
     $("#amount-input").val("");
     resetForm();
   }));
 
   $("#C").on("mouseup",(function(e){ console.log("mouseup on C");
-    $(this).css({transform: "translateY(-2px)"});//.focus();
+    $(this).css({transform: "translateY(-2px)"}).focus();
   }))
 }
 //end of Calculator button
