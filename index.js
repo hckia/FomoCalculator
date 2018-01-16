@@ -79,29 +79,12 @@ var min_val_date = '';
 var submissionClicked = 0;
 
 function BrowserDetection() {
-    //Check if browser is IE
-    if (navigator.userAgent.search("MSIE") & gt; = 0) {
-        // insert conditional IE code here
-    }
-    //Check if browser is Chrome
-    else if (navigator.userAgent.search("Chrome") & gt; = 0) {
-        // insert conditional Chrome code here
-    }
-    //Check if browser is Firefox 
-    else if (navigator.userAgent.search("Firefox") & gt; = 0) {
-        // insert conditional Firefox Code here
-    }
     //Check if browser is Safari
-    else if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         // insert conditional Safari code here https://www.learningjquery.com/2017/05/how-to-use-javascript-to-detect-browser
         alert("This application has detected you are using a Safari Browser Application. On Mobile Safari this should be fine, but on your desktop Safari browser you will have to type the start and end dates in the following format - YYYY-MM-DD");
     }
-    //Check if browser is Opera
-    else if (navigator.userAgent.search("Opera") & gt; = 0) {
-        // insert conditional Opera code here
-    }
 }
-
 
 function max(numbers) {
       let currentMax = numbers[0];
