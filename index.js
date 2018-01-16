@@ -387,7 +387,7 @@ function keyboard() {
 
 //remove button press effect from buttons
       if (keyDownButton) {
-      keyDownButton.css({transform: "translateY(2px)"}).focus();
+      keyDownButton.css({transform: "translateY(2px)"});
       $(keyDownButton).on("keyup", function(e){
       console.log("key lifted");
       $(".js-calc-button").css({transform: "translateY(0px"});
