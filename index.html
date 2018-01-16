@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FOMO Calculator</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body role="document">
+    <section aria-label="Bitcoin Investment Calculator">
+      <div class="calculator js-calculator js-hidden">
+        <header role="banner">
+          <h1>The FOMO<span id="top-header">Bitcoin Calculator</span></h1>
+          <form class="js-invest-form">
+              <fieldset>
+                 <span id="label-amount"><label for="amount-input">(Amount represented in dollars)</label></span>
+                <input aria-label="amount to invest input field" role="spinbutton" class="js-amount" type="number" id="amount-input" dir="rtl"  autofocus> <!-- dir attribute!!! woo -->
+                <button aria-label="first button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-one" aria-hidden="true">1</button>
+                <button aria-label="second button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-two" aria-hidden="true">2</button>
+                <button aria-label="third button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-three" aria-hidden="true">3</button>
+                <button aria-label="fourth button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-four" aria-hidden="true">4</button>
+                <button aria-label="fifth button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-five" aria-hidden="true">5</button>
+                <button aria-label="six button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-six" aria-hidden="true">6</button>
+                <button aria-label="seven button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-seven" aria-hidden="true">7</button>
+                <button aria-label="eight button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-eight" aria-hidden="true">8</button>
+                <button aria-label="nine button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-nine" aria-hidden="true">9</button>
+                <button aria-label="clear button" role="button" class="calc-button js-calc-button" type="button" id="C" aria-hidden="true">C</button>
+                <button aria-label="zero button" role="button" class="calc-button js-calc-num js-calc-button" type="button" id="button-zero" aria-hidden="true">0</button>
+                <button aria-label="delete button" role="button" class="calc-button js-calc-button" type="button" id="DEL" aria-hidden="true">DEL</button>
+                <span class="dates"><label for="start-date">Start Investment</label>
+                <input aria-label="start date" class="js-date-type js-date" type="date" id="start-date" min="2010-07-17" required ></span>
+                <span class="dates"><label for="end-date">End Investment</label>
+                <input aria-label="end date" class="js-date-type js-date-end" type="date" id="end-date" min="2010-07-17" required></span>
+              </fieldset>
+              <input aria-label="submit button" role="button" class="js-submit-button" type="submit" value="Calculate Investment" id="submit-button">
+          </form>
+      </header>
+      </div>
+    </section>
+      <main role="main">
+        <section aria-label="Investment results">
+          <div class="js-hidden investmentDisplay">
+              <table>
+                <thead role="rowgroup">
+                  <tr role="row">
+                    <th role="columnheader">
+                      Investment Results
+                    </th>  
+                  </tr>
+                </thead>
+                <tbody role="rowgroup">
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader js-start-date">
+                      <!-- Should say "initial investment on... " -->
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-price-at-begin">
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader">
+                      Amount Invested
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-amount-dollars">
+                      <!-- should be postfixed with $ -->
+                    </td>
+                  </tr>
+                  <tr role="row">
+                     <td role="cell" class="resultsHeader">
+                      Bitcoins Received
+                     </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-amount-btc">
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader js-end-date">
+                      <!-- Should say "Value on (date here)" -->
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-price-at-end">
+      
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader">
+                      Value of Invesment
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-amount-earned">
+      
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader">
+                      Percentage Increase
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-percentage">
+      
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader js-best-day-in">
+                      <!-- Should say "Best day to Invest (date)" -->
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-best-day-in-value">
+      
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader js-best-day-out">
+                      <!-- Best day to Withdraw (date) -->
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-best-day-out-value">
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader">
+                      Max Percentage Increase
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-best-percentage">
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="resultsHeader">
+                      Max Value of Investment
+                    </td>
+                  </tr>
+                  <tr role="row">
+                    <td role="cell" class="js-best-amount-earned">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </section>
+        <section aria-label="Instructions for The FOMO Bitcoin Calculator">
+            <div id="instructions">
+              <h2>Have you ever wondered...</h2>
+              <p>"If I Started investing my dollars into Bitcoin on a certain date, and sold it on another date, how rich would I be?"</p>
+              <p>
+                Wonder no more.
+              </p>
+              <p>
+                This application calculates how much an investment in dollars into Bitcoin would be between a specific date range. Something you should note about this app...
+              </p>
+              <p>
+                It will not allow you to pick a date earlier than July 17th, 2010. This is the oldest data set.
+              </p>
+              <p>
+                It will always default to "Yesterday" (today minus one day) if you choose any date in the future
+              </p>
+              <button aria-label="start button" role="button" class="calc-button js-start-button" id="start-button">Let's find out...</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
