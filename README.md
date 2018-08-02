@@ -1,4 +1,7 @@
 # FomoCalculator
+
+[Live Site can be found Here](https://hckia.github.io/FomoCalculator/)
+
 The FOMO (Fear Of Missing Out) Calculator tells you what your return on investment (Bitcoin) would have been would have been within a specific range.
 
 The FOMO Calculator calculates what gains would achieved by investing in Bitcoin within a certain date. It utilizes the coindesk api, which holds the historical value of bitcoin all the way from July 17th, 2010 to the "yesterday" (present day minus one day).
