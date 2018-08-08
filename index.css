@@ -20,10 +20,11 @@ body {
 }
 
 .js-hidden {
-  display: none; 
+  display: none;
 }
 
 h1 {
+  padding-top: 15px;
   text-align: center;
   margin-bottom: 0;
 }
@@ -52,7 +53,7 @@ label {
 
 #label-amount {
   padding-left: 35px;
-  text-align: center;  
+  text-align: center;
 }
 
 #amount-input {
@@ -66,11 +67,11 @@ label {
 }
 
 /*REMOVES spinners (up/down arrows for incrementing/decrementing*/
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   -moz-appearance: none;
-  margin: 0; 
+  margin: 0;
 }
 
 .calc-button {
@@ -91,16 +92,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .dates {
-  width: 50%; 
+  width: 50%;
   float: left;
 }
 
 /*REMOVES spinners (up/down arrows for incrementing/decrementing*/
-input[type=date]::-webkit-inner-spin-button, 
-input[type=date]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   -moz-appearance: none;
-  margin: 0; 
+  margin: 0;
 }
 
 .dates input, .dates label {
