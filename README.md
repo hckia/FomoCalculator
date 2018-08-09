@@ -22,7 +22,7 @@ The FOMO Calculator calculates what gains would achieved by investing in Bitcoin
 
 submissionClicked - boolean for the state of the calculator.
 
-## local variabls
+## local variables
 
 ### decimals 
 - from formatCurrencyBTC, formatCurrencyUSD, and formatPercentage functions - holds decimals bitcoin can hold
